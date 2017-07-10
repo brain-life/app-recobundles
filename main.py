@@ -30,6 +30,5 @@ if __name__ == '__main__':
     if not os.path.exists(slr_flow):
         os.makedirs(slr_flow)
 
-    whole_brain_slr_flow(moving_streamlines_files=path+'/mv.trk', static_streamlines_file=path+'/st.trk', out_dir=slr_flow, verbose=True)
-    recognize_bundles_flow(streamline_files=etrk, model_bundle_files=wtrk,out_dir=bundles_flow,verbose=True)
+    recognize_bundles_flow(streamline_files=path+'/st.trk', model_bundle_files=path+'/mv.trk',out_dir=bundles_flow,verbose=True)
     #horizon_flow(input_files=bundles_flow)s
