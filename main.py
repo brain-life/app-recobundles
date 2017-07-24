@@ -26,9 +26,5 @@ if __name__ == '__main__':
     if not os.path.exists(bundles_flow):
         os.makedirs(bundles_flow)
 
-<<<<<<< HEAD
-    recognize_bundles_flow(streamline_files=path+'/st.trk', model_bundle_files=path+'/mv.trk',out_dir=bundles_flow,verbose=True)
-=======
-    recognize_bundles_flow(streamline_files= path+'/st.trk', model_bundle_files=path+'/mv.trk',out_dir=bundles_flow,verbose=True)
->>>>>>> fc428fc93c8c24c3763a1e2277f9f701ebf9cf86
+    recognize_bundles_flow(streamline_files= path+'/mv.trk', model_bundle_files=path+'/st.trk',slr = False, out_dir=bundles_flow,verbose=True)
     #horizon_flow(input_files=bundles_flow)s
