@@ -1,9 +1,4 @@
 {
-    "moving_trk": "/home/aarya22/app-dipy-AFQ/tract/CST_L.tck",
-    "static_trk": "/home/aarya22/app-AFQ-seg/track.tck"
-}
-
-{
-    "moving_tck": "/N/u/aryaam/Karst/app-AFQ-seg/tract/CST_L.tck",
-    "static_tck": "/N/u/aryaam/Karst/app-AFQ-seg/track.tck"
+    "moving_tck": "/N/u/aryaam/Karst/recob/tract1_fgaffine/CST_L.tck",
+    "static_tck": "/N/u/aryaam/Karst/recob/track.tck"
 }
