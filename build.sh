@@ -1,1 +1,1 @@
-docker build . -t app-recobundles
+docker build . -t aarya22/app-recobundles

@@ -7,6 +7,24 @@ if [ -z $SERVICE_DIR ]; then export SERVICE_DIR=`pwd`; fi
 
 #clean up previous job (just in case)
 rm -f finished
+if [ $ENV == "SINGULARITY" ]; then
+cat <<EOT > _run.sh
+time singularity run /usr/local/images/brainlife_dipy-recobundles.img
+#check for output files
+count=$(ls bundles_flow/*.trk | wc -l)
+if [ $count -eq 2 ];
+then
+    echo 0 > finished
+else
+    echo "tracks missing"
+    echo 1 > finished
+    exit 1
+fi
+EOT
+    chmod +x _run.sh
+    nohup ./_run.sh > stdout.log 2> stderr.log & echo $! > pid
+    exit
+fi
 
 if [ $ENV == "IUHPC" ]; then
 	jobid=`qsub $SERVICE_DIR/submit.pbs`
