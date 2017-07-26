@@ -16,4 +16,5 @@ WORKDIR /output
 ENV PYTHONPATH /dipy-recobundles:$PYTHONPATH
 ENV PYTHONPATH /nibabel:$PYTHONPATH
 
-CMD python /app/main.py
+#CMD python /app/main.py
+ENTRYPOINT ["/usr/bin/python", "/app/main.py"]
